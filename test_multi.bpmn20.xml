@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.flowable.org/processdef">
+  <process id="test_multi" name="test_multi" isExecutable="true">
+    <startEvent id="startEvent1" flowable:formFieldValidation="true"></startEvent>
+    <subProcess id="sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9" name="acitivy 1"></subProcess>
+    <sequenceFlow id="sid-38CF50F7-D817-48A0-8F3A-F7ADC5D46461" sourceRef="startEvent1" targetRef="sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9"></sequenceFlow>
+    <subProcess id="sid-66112BC5-829F-47CE-A59E-DD6550EE5C53" name="activity 2"></subProcess>
+    <sequenceFlow id="sid-16308421-A5ED-407B-9E52-E472CC2131E0" sourceRef="sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9" targetRef="sid-66112BC5-829F-47CE-A59E-DD6550EE5C53"></sequenceFlow>
+    <endEvent id="sid-2ECB52BB-4241-4452-A95F-C11D836FEAB4"></endEvent>
+    <sequenceFlow id="sid-1FCD0B7B-0095-4FF0-B5F2-106A1AC791CA" sourceRef="sid-66112BC5-829F-47CE-A59E-DD6550EE5C53" targetRef="sid-2ECB52BB-4241-4452-A95F-C11D836FEAB4"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_test_multi">
+    <bpmndi:BPMNPlane bpmnElement="test_multi" id="BPMNPlane_test_multi">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="105.0" y="150.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9" id="BPMNShape_sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9" isExpanded="false">
+        <omgdc:Bounds height="80.0" width="100.0" x="180.0" y="125.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-66112BC5-829F-47CE-A59E-DD6550EE5C53" id="BPMNShape_sid-66112BC5-829F-47CE-A59E-DD6550EE5C53" isExpanded="false">
+        <omgdc:Bounds height="80.0" width="100.0" x="330.0" y="125.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-2ECB52BB-4241-4452-A95F-C11D836FEAB4" id="BPMNShape_sid-2ECB52BB-4241-4452-A95F-C11D836FEAB4">
+        <omgdc:Bounds height="28.0" width="28.0" x="465.0" y="151.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-16308421-A5ED-407B-9E52-E472CC2131E0" id="BPMNEdge_sid-16308421-A5ED-407B-9E52-E472CC2131E0">
+        <omgdi:waypoint x="279.95000000000005" y="165.0"></omgdi:waypoint>
+        <omgdi:waypoint x="330.0" y="165.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-38CF50F7-D817-48A0-8F3A-F7ADC5D46461" id="BPMNEdge_sid-38CF50F7-D817-48A0-8F3A-F7ADC5D46461">
+        <omgdi:waypoint x="134.9499984899576" y="165.0"></omgdi:waypoint>
+        <omgdi:waypoint x="180.0" y="165.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-1FCD0B7B-0095-4FF0-B5F2-106A1AC791CA" id="BPMNEdge_sid-1FCD0B7B-0095-4FF0-B5F2-106A1AC791CA">
+        <omgdi:waypoint x="429.94999999999334" y="165.0"></omgdi:waypoint>
+        <omgdi:waypoint x="465.0" y="165.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9">
+    <bpmndi:BPMNPlane bpmnElement="sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9" id="BPMNPlane_sid-19FA4CB8-38F2-472C-B9F4-79B6DABB48F9"></bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_sid-66112BC5-829F-47CE-A59E-DD6550EE5C53">
+    <bpmndi:BPMNPlane bpmnElement="sid-66112BC5-829F-47CE-A59E-DD6550EE5C53" id="BPMNPlane_sid-66112BC5-829F-47CE-A59E-DD6550EE5C53"></bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
